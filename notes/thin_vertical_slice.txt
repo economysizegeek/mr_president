@@ -1,0 +1,48 @@
+In order to get started, I'm going to work on a reduced form of the system. That will let me learn how to model things as well as get more comfortable with Clojure.
+
+In the first version, there are two politicians.  They have three attributes.
+
+Charisma - how likeable they are
+Issues - how detailed they are on the issues
+Familiartiy - how well known they are
+
+In future versions, politicians will be able to pay to alter these attributes for themselves and their opponents.
+
+Each voter assigns a weight to each category.  
+Sample Voter:
+
+C: 50%
+I: 35%
+F: 15%
+
+In order to determine who the voter will choose - the voter applies their weights to the politicians attributes.  The politician with the higher score wins the vote.  An election is just a tally of all these votes.
+
+
+Path through the code
+
+build_politician returns a politician
+build_voter returnts a politician
+vote(voter,[politician_1, politician_2]) returns the winning politician
+election([politician_1, politician_2], [list of voters]) returns the winning politician
+
+Once this exists - we can run a simulation of thousands of elections and determine the ideal politician for a given voter population.
+
+Step 1:
+
+Create a 2 politicians by hand
+Create a voter by hand
+Write the vote to return a politician
+
+Step 2: 
+add an election and multiple voters
+
+Step 3:
+auto generate voters
+
+step 4:
+auto generate politicians
+
+step 5:
+simulate 10,000 elections and propigate the winning election to the next race.
+
+
